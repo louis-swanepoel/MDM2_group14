@@ -10,7 +10,7 @@ timeLimit = 6*1; % 6 seconds
 
 for i = 1:500; 
     e=c.snapshot;
-    mkdir = createMaskG2(e); 
+    mkdir = createMask(e); 
     images{i} = mkdir; %write images to be saved later
     if toc(time0)>timeLimit %ends loop after the "timeLimit" 
       break
