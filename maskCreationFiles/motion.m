@@ -3,11 +3,24 @@ clear all
 close all
 warning off
 c=webcam;
-for i = 1:10;
+images = {};
+
+time0 = tic;
+timeLimit = 6*1; % 6 seconds
+
+for i = 1:500; 
     e=c.snapshot;
-    mkdir = createMask(e);
-    imshowpair(e,mkdir,'montage');
-    imwrite(mkdir, ['camera1_' num2str(i) '.png'])
+    mkdir = createMaskG2(e); 
+    images{i} = mkdir; %write images to be saved later
+    if toc(time0)>timeLimit %ends loop after the "timeLimit" 
+      break
+    end
+
 end
 
-%takes 10 pics, saves them to the same folde the script is in
+num = size(images);
+numItem = num(2);
+
+for j = 1:numItem;
+    imwrite(images{j}, ['camera1_' num2str(j) '.png']) %saves images from the cells 
+end
