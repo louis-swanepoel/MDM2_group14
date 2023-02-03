@@ -5,8 +5,9 @@ function [Centroid] = CentreOfMass(image)
 originalImage = imread(image);
 
 % Clean image of artifacts
-cleanImage = imfill(originalImage, 'holes');
-cleanImage =  bwareaopen(cleanImage, 69);
+cleanImage =  bwareaopen(originalImage, 150);
+cleanImage = imfill(cleanImage, 'holes');
+
 
 if cleanImage == 0
     Centroid = NaN;
@@ -17,4 +18,6 @@ else
     props = regionprops(labeledImage, originalImage, 'all');
     Centroid = props(1).Centroid;
 
+%figure(6)
+%imshow(cleanImage)
 end
