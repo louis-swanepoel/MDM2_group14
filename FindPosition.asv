@@ -19,11 +19,11 @@ for frame = frames'
 end
 
 % Extract relevant x and y positions 
-yPositionAtRest = centroid(1,1); 
-zPositionAtRest = centroid(2,1);
+yPositionAtRest = (centroid(1,1)-centroid(1,end))/2; 
+zPositionAtRest = (centroid(2,1)-centroid(2,end))/2;
 yDiscplacement = centroid(1,:)- yPositionAtRest;
 zDiscplacement = centroid(2,:)- zPositionAtRest;
-theta = atan(zDiscplacement./yDiscplacement);
+theta = atand(zDiscplacement./yDiscplacement);
 
 % Velocity calculations
 yVelocity = zeros(1,nFrames);
