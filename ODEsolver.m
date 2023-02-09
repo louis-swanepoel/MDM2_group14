@@ -6,7 +6,7 @@ r_ac = 0.1017;%reason is the same for I_c
 g = 9.81;
 m = 0.2159;
 I_c = 9.47e-4; %still need to get accurate values for R1,R2,R3 before this is accurate
-mu= 0.8;
+mu= 0.7;
 
 %Time point
 t_span = [0,5];
