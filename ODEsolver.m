@@ -17,10 +17,10 @@ for i = 1:numel(mu)
 end
 
 
-angular_vel = diff(theta_results(:,1,100));
-angular_acc = diff(angular_vel);
-t1 = linspace(0,5,39);%needed for the new angular_vel vector as its smaller than t
-t2 = linspace(0,5,38);%same reason
+% angular_vel = diff(theta_results(:,1,100));
+% angular_acc = diff(angular_vel);
+% t1 = linspace(0,5,39);%needed for the new angular_vel vector as its smaller than t
+% t2 = linspace(0,5,38);%same reason
 
 
 figure(1)
@@ -37,9 +37,9 @@ plot(t,theta_results(:,2,100),"r","LineWidth",2)%Plots the displacement as a fun
 ylabel('Angular Velocity ${\dot\theta}$',Interpreter='latex')
 xlabel('Time (s)')
 grid on
-
-nexttile
-plot(t2,angular_acc,"m","LineWidth",2)
-ylabel('Angular Acceleration ${\ddot\theta}$',Interpreter='latex')
-xlabel('Time(s)')
-grid on
+% 
+% nexttile
+% plot(t2,angular_acc,"m","LineWidth",2)
+% ylabel('Angular Acceleration ${\ddot\theta}$',Interpreter='latex')
+% xlabel('Time(s)')
+% grid on
