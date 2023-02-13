@@ -3,7 +3,7 @@ function [Centroid] = CentreOfMass(image)
 originalImage = imread(image);
 
 % Clean image of artifacts
-cleanImage =  bwareaopen(originalImage, 20);
+cleanImage =  bwareaopen(originalImage, 200);
 cleanImage = imfill(cleanImage, 'holes');
 
 
