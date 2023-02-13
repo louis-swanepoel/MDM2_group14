@@ -3,11 +3,9 @@
 rodLengthGreen = 100/1000;
 rodLengthBlack = 60/1000;
 rodLengthYellow = 20/1000;
-directory = 'Yellow03.02/*.png';
+directory = 'YellowMainExp/Yellow2/*.png';
 
-[theta,yDiscplacement,zDiscplacement,...
-    yVelocity,zVelocity,thetaDot,yAcc,zAcc,thetaDotDot] ...
-    = FrameAnalysis(rodLengthYellow,directory);
+[theta,yDiscplacement,zDiscplacement,yVelocity,zVelocity,thetaDot] = FrameAnalysis(rodLengthYellow,directory);
 
 timeInMotion = 6;
 nFrames = length(theta);

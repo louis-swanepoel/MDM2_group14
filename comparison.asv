@@ -1,0 +1,6 @@
+thetaexp=theta;
+thetamath=theta_results(:,1);
+thetamath=linspace(thetamath(1),thetamath(end),numel(thetaexp));
+
+for i=1:size(thetaexp)
+    sum(i)=mod(theta
