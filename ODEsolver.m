@@ -22,24 +22,18 @@ t2 = linspace(0,5,38);%same reason
 
 
 figure(1)
-tiledlayout(4,1)
+tiledlayout(3,1)
 
 nexttile
-plot(t,theta_results(:,1),"b",t,theta,"m","LineWidth",2) %plots the Angular Displacement as a function of time
+plot(t,theta_results(:,1),"b", 'LineWidth',2) %plots the Angular Displacement as a function of time
 ylabel('Angular Displacement ${\theta}$',Interpreter='latex')
 xlabel('Time (s)')
 grid on
 
 nexttile
 plot(t,theta_results(:,2),"r","LineWidth",2)%Plots the displacement as a function of time
-ylabel('Displacement ',Interpreter='latex')
-xlabel('Time (s)')
-grid on
-
-nexttile
-plot(t1,angular_vel,"g","LineWidth",2)
 ylabel('Angular Velocity ${\dot\theta}$',Interpreter='latex')
-xlabel('Time(s)')
+xlabel('Time (s)')
 grid on
 
 nexttile
