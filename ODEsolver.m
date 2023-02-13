@@ -24,7 +24,7 @@ end
 
 
 figure(1)
-tiledlayout(3,1)
+tiledlayout(2,1)
 
 nexttile
 plot(t,theta_results(:,1,100),"b", 'LineWidth',2) %plots the Angular Displacement as a function of time
