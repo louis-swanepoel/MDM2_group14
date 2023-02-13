@@ -9,7 +9,7 @@ I_c = 9.47e-4; %still need to get accurate values for R1,R2,R3 before this is ac
 mu= 0.7;
 
 %Time point
-t_span = [0,5];
+t_span = linspace(0,5,40);
 
 %solve ODE;
 [t,theta_results] = ode45(@(t, theta) ode_func(t, theta,g,r_ac,m,I_c,mu),t_span,theta_0);
@@ -17,15 +17,15 @@ t_span = [0,5];
 
 angular_vel = diff(theta_results(:,1));
 angular_acc = diff(angular_vel);
-t1 = linspace(0,5,188);%needed for the new angular_vel vector as its smaller than t
-t2 = linspace(0,5,187);%same reason
+t1 = linspace(0,5,39);%needed for the new angular_vel vector as its smaller than t
+t2 = linspace(0,5,38);%same reason
 
 
 figure(1)
 tiledlayout(4,1)
 
 nexttile
-plot(t,theta_results(:,1),"b", 'LineWidth',2) %plots the Angular Displacement as a function of time
+plot(t,theta_results(:,1),"b",t,theta,"m","LineWidth",2) %plots the Angular Displacement as a function of time
 ylabel('Angular Displacement ${\theta}$',Interpreter='latex')
 xlabel('Time (s)')
 grid on
