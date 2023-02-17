@@ -27,7 +27,12 @@ end
 new = sum(obj(:,:));
 
 
+
 [t,theta_results2] = ode45(@(t, tHeta) ode_func(t,tHeta,g,r_ac,m,I_c,mu2),t_span,theta_0);
+
+%figure(1)
+%tiledlayout(2,1)
+
 
 
 %figure(1)
