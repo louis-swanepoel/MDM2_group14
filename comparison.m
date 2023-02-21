@@ -13,8 +13,9 @@ end
 
 
 
+figure(1)
 mu=linspace(0,1,numel(thetaexp));
-plot(mu,newobj);
+plot(mu,newobj)
 
 
 

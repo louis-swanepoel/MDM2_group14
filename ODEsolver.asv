@@ -6,7 +6,7 @@ g = 9.81;
 m = 0.2159;
 I_c = 6.577e-3;
 mu1= linspace(0,1,172);
-mu2 = 1;%could be 0.847
+mu2 = 1;
 %Time point
 t_span = linspace(0,20,172);
 t_experiment = linspace(0,6,172);
@@ -78,9 +78,9 @@ legend('${\phi}$(${\mu}$)',Interpreter='latex',Fontsize=18)
 % saveas(fig,"Disp_Vel_Fric.jpg",'jpg')
 % close(fig);
 
-fig=openfig("New_FrictionGraph.fig",'new','invisible');
-saveas(fig,"New_FrictionGraph.jpg",'jpg')
-close(fig);
+% fig=openfig("Friction_Coefficient.fig",'new','invisible');
+% saveas(fig,"Friction_Coefficient.jpg",'jpg')
+% close(fig);
 
 
 
