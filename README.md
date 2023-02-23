@@ -1,5 +1,5 @@
 # MDM2_group14
-Tony's colourful balls 
+Code used to find the optimal friction coefficient in a Lagrangian model of a pendulum system
 
 Mathematical data modelling project term 2. 
 
